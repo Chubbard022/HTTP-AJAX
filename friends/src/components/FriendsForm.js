@@ -11,7 +11,7 @@ class FriendsForm extends React.Component{
     render(){
         return(
             <h1>
-                Hello from FriendsForm
+                
             </h1>
         )
     }

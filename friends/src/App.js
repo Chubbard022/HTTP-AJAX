@@ -24,12 +24,11 @@ componentDidMount(){
   //when the request has failed
   .catch(err=>err);
 }
-updateFriend = ()=>{
 
-}
-deleteFriend = ()=>{
-  
-}
+updateFriend = ()=>{}
+
+deleteFriend = ()=>{}
+
   render() {
     return (
       <div >
