@@ -5,9 +5,9 @@ import axios from 'axios';
 import FriendsList from './components/FriendsList';
 import FriendsForm from './components/FriendsForm';
 
-
-
-const server = 'http://localhost:5000';
+//CRUD
+// Create Read Update delete
+// Post Get Put Del
 
 class App extends Component {
   constructor(){
@@ -18,7 +18,11 @@ class App extends Component {
   }
   
 componentDidMount(){
-  
+  axios.get('http://localhost:5000/friends')
+  //when the request has success
+  .then(res=>this.setState({friendList: res.data}))
+  //when the request has failed
+  .catch(err=>err);
 }
 updateFriend = ()=>{
 
