@@ -20,7 +20,7 @@ componentDidMount(){
   render() {
     return (
       <div >
-       <friendList friendsArray={this.state.friendList} />
+       <FriendsList friendsArray={this.state.friendList} />
       </div>
     );
   }
