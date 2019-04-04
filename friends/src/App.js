@@ -25,7 +25,7 @@ componentDidMount(){
   .catch(err=>err);
 }
 
-updateFriendList = () =>{
+updateFriendList = (id) =>{
   axios
   .put(`http://localhost:5000/friends/${id}`)
   .then((res)=>{console.log(res)})

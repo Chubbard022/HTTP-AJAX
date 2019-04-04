@@ -14,6 +14,23 @@ class FriendsForm extends React.Component{
 
     changeHandler = event =>{
         event.persist();
+        let value = event.target.value;
+
+        if(event.target.value === 'age'){
+            value = parseInt(value, 10);
+        }
+        this.setState(prevState => ({
+            friend: {
+              ...prevState.item,
+              [event.target.name]: value
+            }
+          }));
+    }
+
+    handleSubmit = (event)=>{
+        event.preventDefault();
+
+        
     }
 
     render(){
@@ -26,7 +43,7 @@ class FriendsForm extends React.Component{
                     name="name"
                     onChange={this.changeHandler}
                     placeholder="name"
-                    //value={this.state.item.name}
+                    value={this.state.friend.name}
                 />
                 <input
                     className='input-box'
@@ -34,7 +51,7 @@ class FriendsForm extends React.Component{
                     name="age"
                     onChange={this.changeHandler}
                     placeholder="age"
-                    //value={this.state.item.price}
+                    value={this.state.friend.age}
                 />
                 <input
                     className='input-box'
@@ -42,7 +59,7 @@ class FriendsForm extends React.Component{
                     name="email"
                     onChange={this.changeHandler}
                     placeholder="email"
-                    //value={this.state.item.imageUrl}
+                    value={this.state.friend.email}
                 />
                 <button>Add Friend</button>
                 </form>
