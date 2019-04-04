@@ -25,13 +25,11 @@ componentDidMount(){
   .catch(err=>err);
 }
 
-updateFriendList = (event,friend) =>{
+addFriend = (event,friend) =>{
+  event.preventDefault();
   axios
   .post(`http://localhost:5000/friends/`,friend)
-  .then((res)=>{
-    console.log(res)
-    this.setState({friendList: res.data})
-  })
+  .then((res)=>{ this.setState({friendList: res.data}) })
   .catch((err)=>{console.log(err)})
 }
 
@@ -39,7 +37,7 @@ updateFriendList = (event,friend) =>{
   render() {
     return (
       <div >
-        <FriendsForm updateFriendList={this.updateFriendList}/>
+        <FriendsForm addFriend={this.addFriend}/>
        <FriendsList friendsArray={this.state.friendList} />
       </div>
     );

@@ -38,3 +38,15 @@ button{
 body{
   background-color: rgb(250, 243, 233);
 }
+.add{
+  background-color:rgb(54, 151, 54);
+  color: white;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.delete{
+  background-color: rgb(240, 75, 75);
+  color: white;
+  border-radius: 20px;
+  font-size: 15px;
+}

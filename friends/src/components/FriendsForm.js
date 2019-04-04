@@ -21,7 +21,7 @@ class FriendsForm extends React.Component{
         }
         this.setState(prevState => ({
             friend: {
-              ...prevState.item,
+              ...prevState.friend,
               [event.target.name]: value
             }
           }));
@@ -29,7 +29,7 @@ class FriendsForm extends React.Component{
 
     handleSubmit = (event)=>{
         event.preventDefault();
-
+        this.props.addFriend(event,this.state.friend);
         this.setState({
             friend: {
               name: "",
@@ -37,10 +37,7 @@ class FriendsForm extends React.Component{
               email: ""
             }
           });
-
-        this.props.updateFriendList(this.state.friend);
     }
-
     render(){
         return(
             <div className='form'>
