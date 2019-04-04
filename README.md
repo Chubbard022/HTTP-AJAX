@@ -19,7 +19,7 @@ DONE
 5.  CD into `friends` and run `yarn start or npm start` to fire up your React Dev Server.
 DONE
 6.  Inside your React application, create a component to display the list of friends coming from the server.
-
+DONE
 7.  Add a form to gather information about a new friend.
 
 8.  Add a button to save the new friend by making a `POST` request to the same endpoint listed above.
