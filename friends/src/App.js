@@ -25,26 +25,24 @@ componentDidMount(){
   .catch(err=>err);
 }
 
-updateFriendList = (id) =>{
+updateFriendList = (event,friend) =>{
   axios
-  .put(`http://localhost:5000/friends/${id}`)
-  .then((res)=>{console.log(res)})
+  .post(`http://localhost:5000/friends/`,friend)
+  .then((res)=>{
+    console.log(res)
+    this.setState({friendList: res.data})
+  })
   .catch((err)=>{console.log(err)})
 }
 
 
-updateFriend = ()=>{}
-
-deleteFriend = ()=>{}
-
   render() {
     return (
       <div >
-        <FriendsForm />
+        <FriendsForm updateFriendList={this.updateFriendList}/>
        <FriendsList friendsArray={this.state.friendList} />
       </div>
     );
   }
 }
-
 export default App;

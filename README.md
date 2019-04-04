@@ -21,7 +21,7 @@ DONE
 6.  Inside your React application, create a component to display the list of friends coming from the server.
 DONE
 7.  Add a form to gather information about a new friend.
-
+DONE
 8.  Add a button to save the new friend by making a `POST` request to the same endpoint listed above.
 
 9.  Each `friend` should have the properties listed below.

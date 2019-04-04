@@ -30,7 +30,15 @@ class FriendsForm extends React.Component{
     handleSubmit = (event)=>{
         event.preventDefault();
 
-        
+        this.setState({
+            friend: {
+              name: "",
+              age: "",
+              email: ""
+            }
+          });
+
+        this.props.updateFriendList(this.state.friend);
     }
 
     render(){
